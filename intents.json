@@ -1,0 +1,256 @@
+{
+  "intents": [
+    {
+      "tag": "query1",
+      "patterns": ["What is the capital of France?", "Capital of France?", "France capital?"],
+      "responses": ["The capital of France is Paris."]
+    },
+    {
+      "tag": "query2",
+      "patterns": ["What is the tallest mountain in the world?", "Tallest mountain?", "Highest mountain?"],
+      "responses": ["The tallest mountain in the world is Mount Everest."]
+    },
+    {
+      "tag": "query3",
+      "patterns": ["Who wrote 'Romeo and Juliet'?", "Author of Romeo and Juliet?", "Romeo and Juliet writer?"],
+      "responses": ["'Romeo and Juliet' was written by William Shakespeare."]
+    },
+    {
+      "tag": "query4",
+      "patterns": ["What is the capital of Japan?", "Capital of Japan?", "Japan capital?"],
+      "responses": ["The capital of Japan is Tokyo."]
+    },
+    {
+      "tag": "query5",
+      "patterns": ["Who painted the Mona Lisa?", "Artist of Mona Lisa?", "Mona Lisa painter?"],
+      "responses": ["The Mona Lisa was painted by Leonardo da Vinci."]
+    },
+    {
+      "tag": "query6",
+      "patterns": ["What is the currency of Australia?", "Currency of Australia?", "Australia currency?"],
+      "responses": ["The currency of Australia is the Australian Dollar."]
+    },
+    {
+      "tag": "query7",
+      "patterns": ["Who discovered penicillin?", "Discoverer of penicillin?", "Penicillin discoverer?"],
+      "responses": ["Penicillin was discovered by Alexander Fleming."]
+    },
+    {
+      "tag": "query8",
+      "patterns": ["What is the largest ocean?", "Largest ocean?", "Biggest ocean?"],
+      "responses": ["The largest ocean is the Pacific Ocean."]
+    },
+    {
+      "tag": "query9",
+      "patterns": ["Who wrote 'Harry Potter'?", "Author of Harry Potter?", "Harry Potter writer?"],
+      "responses": ["'Harry Potter' was written by J.K. Rowling."]
+    },
+    {
+      "tag": "query10",
+      "patterns": ["What is the capital of Brazil?", "Capital of Brazil?", "Brazil capital?"],
+      "responses": ["The capital of Brazil is Brasília."]
+    },
+    {
+      "tag": "query11",
+      "patterns": ["Who invented the telephone?", "Inventor of telephone?", "Telephone inventor?"],
+      "responses": ["The telephone was invented by Alexander Graham Bell."]
+    },
+    {
+      "tag": "query12",
+      "patterns": ["What is the currency of Japan?", "Currency of Japan?", "Japan currency?"],
+      "responses": ["The currency of Japan is the Japanese Yen."]
+    },
+    {
+      "tag": "query13",
+      "patterns": ["Who painted the 'Starry Night'?", "Artist of Starry Night?", "Starry Night painter?"],
+      "responses": ["The 'Starry Night' was painted by Vincent van Gogh."]
+    },
+    {
+      "tag": "query14",
+      "patterns": ["What is the largest desert in the world?", "Largest desert?", "Biggest desert?"],
+      "responses": ["The largest desert in the world is the Sahara Desert."]
+    },
+    {
+      "tag": "query15",
+      "patterns": ["Who discovered gravity?", "Discoverer of gravity?", "Gravity discoverer?"],
+      "responses": ["Gravity was famously described by Isaac Newton."]
+    },
+    {
+      "tag": "query16",
+      "patterns": ["What is the currency of India?", "Currency of India?", "India currency?"],
+      "responses": ["The currency of India is the Indian Rupee."]
+    },
+    {
+      "tag": "query17",
+      "patterns": ["Who wrote 'The Great Gatsby'?", "Author of The Great Gatsby?", "The Great Gatsby writer?"],
+      "responses": ["'The Great Gatsby' was written by F. Scott Fitzgerald."]
+    },
+    {
+      "tag": "query18",
+      "patterns": ["What is the smallest country in the world?", "Smallest country?", "Tiny country?"],
+      "responses": ["The smallest country in the world is Vatican City."]
+    },
+    {
+      "tag": "query19",
+      "patterns": ["Who discovered America?", "Discoverer of America?", "America discoverer?"],
+      "responses": ["America was discovered by Christopher Columbus."]
+    },
+    {
+      "tag": "query20",
+      "patterns": ["What is the capital of India?", "Capital of India?", "India capital?"],
+      "responses": ["The capital of India is New Delhi."]
+    },
+    {
+      "tag": "query21",
+      "patterns": ["Who wrote 'To Kill a Mockingbird'?", "Author of To Kill a Mockingbird?", "To Kill a Mockingbird writer?"],
+      "responses": ["'To Kill a Mockingbird' was written by Harper Lee."]
+    },
+    {
+      "tag": "query22",
+      "patterns": ["What is the currency of Russia?", "Currency of Russia?", "Russia currency?"],
+      "responses": ["The currency of Russia is the Russian Ruble."]
+    },
+    {
+      "tag": "query23",
+      "patterns": ["Who painted 'The Last Supper'?", "Artist of The Last Supper?", "The Last Supper painter?"],
+      "responses": ["'The Last Supper' was painted by Leonardo da Vinci."]
+    },
+    {
+      "tag": "query24",
+      "patterns": ["What is the longest river in the world?", "Longest river?", "Biggest river?"],
+      "responses": ["The longest river in the world is the Nile River."]
+    },
+    {
+      "tag": "query25",
+      "patterns": ["Who discovered electricity?", "Discoverer of electricity?", "Electricity discoverer?"],
+      "responses": ["The principles of electricity were discovered by Benjamin Franklin."]
+    },
+    {
+      "tag": "query26",
+      "patterns": ["What is the currency of China?", "Currency of China?", "China currency?"],
+      "responses": ["The currency of China is the Chinese Yuan."]
+    },
+    {
+      "tag": "query27",
+      "patterns": ["Who wrote 'The Lord of the Rings'?", "Author of The Lord of the Rings?", "The Lord of the Rings writer?"],
+      "responses": ["'The Lord of the Rings' was written by J.R.R. Tolkien."]
+    },
+    {
+      "tag": "query28",
+      "patterns": ["What is the coldest continent?", "Coldest continent?", "Freezing continent?"],
+      "responses": ["The coldest continent is Antarctica."]
+    },
+    {
+      "tag": "query29",
+      "patterns": ["Who discovered the theory of relativity?", "Discoverer of relativity theory?", "Relativity theory discoverer?"],
+      "responses": ["The theory of relativity was formulated by Albert Einstein."]
+    },
+    {
+      "tag":
+
+ "query30",
+      "patterns": ["What is the currency of Germany?", "Currency of Germany?", "Germany currency?"],
+      "responses": ["The currency of Germany is the Euro."]
+    },
+    {
+      "tag": "query31",
+      "patterns": ["Who painted the 'Mona Lisa'?", "Artist of Mona Lisa?", "Mona Lisa painter?"],
+      "responses": ["The 'Mona Lisa' was painted by Leonardo da Vinci."]
+    },
+    {
+      "tag": "query32",
+      "patterns": ["What is the largest animal in the world?", "Largest animal?", "Biggest animal?"],
+      "responses": ["The largest animal in the world is the blue whale."]
+    },
+    {
+      "tag": "query33",
+      "patterns": ["Who discovered penicillin?", "Discoverer of penicillin?", "Penicillin discoverer?"],
+      "responses": ["Penicillin was discovered by Alexander Fleming."]
+    },
+    {
+      "tag": "query34",
+      "patterns": ["What is the currency of Canada?", "Currency of Canada?", "Canada currency?"],
+      "responses": ["The currency of Canada is the Canadian Dollar."]
+    },
+    {
+      "tag": "query35",
+      "patterns": ["Who wrote '1984'?", "Author of 1984?", "1984 writer?"],
+      "responses": ["'1984' was written by George Orwell."]
+    },
+    {
+      "tag": "query36",
+      "patterns": ["What is the hottest planet in our solar system?", "Hottest planet?", "Warmest planet?"],
+      "responses": ["The hottest planet in our solar system is Venus."]
+    },
+    {
+      "tag": "query37",
+      "patterns": ["Who discovered the laws of motion?", "Discoverer of laws of motion?", "Laws of motion discoverer?"],
+      "responses": ["The laws of motion were described by Isaac Newton."]
+    },
+    {
+      "tag": "query38",
+      "patterns": ["What is the currency of South Africa?", "Currency of South Africa?", "South Africa currency?"],
+      "responses": ["The currency of South Africa is the South African Rand."]
+    },
+    {
+      "tag": "query39",
+      "patterns": ["Who wrote 'Pride and Prejudice'?", "Author of Pride and Prejudice?", "Pride and Prejudice writer?"],
+      "responses": ["'Pride and Prejudice' was written by Jane Austen."]
+    },
+    {
+      "tag": "query40",
+      "patterns": ["What is the longest mountain range in the world?", "Longest mountain range?", "Biggest mountain range?"],
+      "responses": ["The longest mountain range in the world is the Andes."]
+    },
+    {
+      "tag": "query41",
+      "patterns": ["Who discovered radioactivity?", "Discoverer of radioactivity?", "Radioactivity discoverer?"],
+      "responses": ["Radioactivity was discovered by Marie Curie."]
+    },
+    {
+      "tag": "query42",
+      "patterns": ["What is the currency of France?", "Currency of France?", "France currency?"],
+      "responses": ["The currency of France is the Euro."]
+    },
+    {
+      "tag": "query43",
+      "patterns": ["Who wrote 'The Catcher in the Rye'?", "Author of The Catcher in the Rye?", "The Catcher in the Rye writer?"],
+      "responses": ["'The Catcher in the Rye' was written by J.D. Salinger."]
+    },
+    {
+      "tag": "query44",
+      "patterns": ["What is the largest city in the world?", "Largest city?", "Biggest city?"],
+      "responses": ["The largest city in the world by population is Tokyo, Japan."]
+    },
+    {
+      "tag": "query45",
+      "patterns": ["Who discovered the circulation of blood?", "Discoverer of blood circulation?", "Blood circulation discoverer?"],
+      "responses": ["The circulation of blood was described by William Harvey."]
+    },
+    {
+      "tag": "query46",
+      "patterns": ["What is the currency of Brazil?", "Currency of Brazil?", "Brazil currency?"],
+      "responses": ["The currency of Brazil is the Brazilian Real."]
+    },
+    {
+      "tag": "query47",
+      "patterns": ["Who wrote 'The Odyssey'?", "Author of The Odyssey?", "The Odyssey writer?"],
+      "responses": ["'The Odyssey' is attributed to the ancient Greek poet Homer."]
+    },
+    {
+      "tag": "query48",
+      "patterns": ["What is the deepest ocean trench?", "Deepest ocean trench?", "Biggest ocean trench?"],
+      "responses": ["The deepest ocean trench is the Mariana Trench in the Pacific Ocean."]
+    },
+    {
+      "tag": "query49",
+      "patterns": ["Who discovered the theory of evolution?", "Discoverer of evolution theory?", "Evolution theory discoverer?"],
+      "responses": ["The theory of evolution was proposed by Charles Darwin."]
+    },
+    {
+      "tag": "query50",
+      "patterns": ["What is the currency of Italy?", "Currency of Italy?", "Italy currency?"],
+      "responses": ["The currency of Italy is the Euro."]
+    }
+  ]
+}
