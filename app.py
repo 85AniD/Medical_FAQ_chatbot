@@ -34,9 +34,17 @@ def register():
 
 
 
-@app.route('/login', methods=["GET"])
+@app.route('/login', methods=["GET","POST"])
 def login():
-    return render_template('login.html', **locals())
+    if request.method == 'POST':
+        if lgin(request.form['email'],request.form['password']):
+            return jsonify({"response": "login successful" ,"status":"true"})
+        else:
+            return jsonify({"response": "login failed" ,"status":"false" })
+    elif request.method == 'GET':
+        return render_template('login.html', **locals())
+   
+    
 
 @app.route('/chatbot', methods=["GET", "POST"])
 def chatbotResponse():
@@ -49,6 +57,13 @@ def chatbotResponse():
     return jsonify({"response": response })
 
 def reg(name, email, password):
+    user = User.query.filter_by(email=email).first()
+
+        # Return True if a user with the email is found, False otherwise
+        
+    if user is not None:
+        return "email already exsists"
+    
     try:
         # Create a new user instance
         new_user = User(name=name, email=email, password=password)
@@ -66,6 +81,24 @@ def reg(name, email, password):
         # Handle any potential errors during database operations
         db.session.rollback()  # Rollback changes in case of errors
         return "user not created"
+
+
+def lgin(email,password):
+    try:
+        # Query the database for a user with the given email
+        user = User.query.filter_by(email=email).first()
+
+        # Check if user exists and password matches (if user is found)
+        if user and user.password == password:
+            return True
+        else:
+            return False
+
+    except Exception as e:
+        # Handle potential errors during database operations
+  
+        return False
+
 
 
 if __name__ == '__main__':
