@@ -62,3 +62,6 @@ def chatbot_response(msg):
     ints = predict_class(msg, model)
     res = getResponse(ints, intents)
     return res
+
+def register(userinfo):
+     return "true"

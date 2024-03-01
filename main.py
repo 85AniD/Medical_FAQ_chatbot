@@ -1,15 +1,19 @@
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, render_template, request, redirect, session, jsonify, flash, url_for
 import os
-import mysql.connector as sqltr
-import text_process
-
+from sqlalchemy_utils import create_database, database_exists
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 botname = "AniD"
 
-# Define the SQLAlchemy instance
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://root:@localhost:3306/user_profile"
+
+
+url = "mysql://root:@localhost/user_profile"
+if not database_exists(url):
+    create_database(url)
+
+# Configure SQLAlchemy database connection (avoid direct database connection)
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://root:@localhost/user_profile"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -20,11 +24,19 @@ class User(db.Model):
     email = db.Column(db.String(100))
     password = db.Column(db.String(100))
 
-    def __init__(self, name, email, password):
-        self.name = name
-        self.email = email
-        self.password = password
+    # Constructor for model initialization (optional)
+   
 
-# Database connection setup
-conn = sqltr.connect(host="localhost", user="root", password="", database="user_profile")
-cur = conn.cursor()
+# Function to create the database (recommended approach)
+def create_user_profile_database():
+    """Creates the 'user_profile' database if it doesn't already exist."""
+
+    with app.app_context():  # Ensure application context
+        db.create_all()  # Create all database tables defined in the models
+
+# Execute the database creation function
+create_user_profile_database()
+
+
+
+
