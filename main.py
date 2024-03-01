@@ -9,7 +9,7 @@ app.secret_key = os.urandom(24)
 botname = "AniD"
 
 # Define the SQLAlchemy instance
-app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://newuser:password@localhost/user_profile"
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://root:@localhost:3306/user_profile"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
