@@ -2,7 +2,7 @@ from flask import Flask, render_template, jsonify, request
 import processor
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, render_template, request, redirect, session, jsonify, flash, url_for
-
+from flask_session import Session
 
 
 app = Flask(__name__)
@@ -10,6 +10,9 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'enter-a-very-secretive-key-3479373'
 app.config['SQLALCHEMY_DATABASE_URI'] = "mysql://root:@localhost/user_profile"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config["SESSION_PERMANENT"] = False
+app.config["SESSION_TYPE"] = "filesystem"
+Session(app)
 db = SQLAlchemy(app)
 
 class User(db.Model):
@@ -18,7 +21,34 @@ class User(db.Model):
     email = db.Column(db.String(100))
     password = db.Column(db.String(100))
 
+
+def loggedin(func):
+    def secure_function():
+        if  not session.get("email") or  not session.get("password"):
+            return redirect("/login")
+        else:
+            if lgin(session.get("email"), session.get("password")):
+                return func()
+            else:
+                return redirect("/login")
+
+    return secure_function
+
+def loggedout(func):
+    def secure_function():  # Corrected misspelling
+        if "email" not in session or "password" not in session:
+            return func()
+        else:
+            if lgin(session.get("email"), session.get("password")):
+                return redirect("/")
+            else:
+                return func()
+
+    return secure_function
+
+
 @app.route('/', methods=["GET", "POST"])
+@loggedin
 def index():
     return render_template('index.html', **locals())
 
@@ -38,6 +68,8 @@ def register():
 def login():
     if request.method == 'POST':
         if lgin(request.form['email'],request.form['password']):
+            session["email"]=request.form['email']
+            session["password"]=request.form['password']
             return jsonify({"response": "login successful" ,"status":"true"})
         else:
             return jsonify({"response": "login failed" ,"status":"false" })
@@ -98,6 +130,8 @@ def lgin(email,password):
         # Handle potential errors during database operations
   
         return False
+
+
 
 
 

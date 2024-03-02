@@ -24,7 +24,7 @@ class User(db.Model):
     email = db.Column(db.String(100))
     password = db.Column(db.String(100))
 
-    # Constructor for model initialization (optional)
+   
    
 
 # Function to create the database (recommended approach)
